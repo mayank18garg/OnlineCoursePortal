@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment6.0", "Assignment6.0\Assignment6.0.csproj", "{BBB3254A-9C73-4750-ADEC-92983F70A764}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineCoursePortal", "Assignment6.0\OnlineCoursePortal.csproj", "{BBB3254A-9C73-4750-ADEC-92983F70A764}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
