@@ -1,0 +1,14 @@
+{
+  "courses": [
+    {
+      "Code": "CSE445",
+      "Name": "Software",
+      "seats": 48
+    },
+    {
+      "Code": "CSE58",
+      "Name": "mayank",
+      "seats": 99
+    }
+  ]
+}
