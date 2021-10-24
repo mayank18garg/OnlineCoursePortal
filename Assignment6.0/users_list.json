@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "StudentId": "1",
+      "StudentName": "Tanmay",
+      "StudentCourses": [ "CSE 445", "CSE 563", "CSE 543" ]
+    },
+    {
+      "StudentId": "2",
+      "StudentName": "Nakul",
+      "StudentCourses": [ "CSE 473", "CSE 571", "CSE 598" ]
+    }
+  ]
+}

@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="courses_list.json" />
+    <Content Include="libman.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
