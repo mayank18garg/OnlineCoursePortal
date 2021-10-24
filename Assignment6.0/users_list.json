@@ -3,19 +3,19 @@
     {
       "StudentId": "10000",
       "StudentName": "Tanmay",
-      "StudentCourses": [ "CSE 445", "CSE 563", "CSE 543" ],
+      "StudentCourses": [ "CSE445", "CSE563", "CSE543" ],
       "Password": "97100109105110"
     },
     {
       "StudentId": "10001",
       "StudentName": "Nakul",
-      "StudentCourses": [ "CSE 473", "CSE 571", "CSE 598" ],
+      "StudentCourses": [ "CSE473", "CSE571", "CSE598" ],
       "Password": "97100109105110"
     },
     {
       "StudentId": "10003",
       "StudentName": "Mayank",
-      "StudentCourses": [ "CSE 473", "CSE 571", "CSE 598" ],
+      "StudentCourses": [ "CSE473", "CSE571", "CSE598" ],
       "Password": "97100109105110"
     }
   ]

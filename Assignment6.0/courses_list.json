@@ -3,7 +3,7 @@
     {
       "Code": "CSE445",
       "Name": "Software",
-      "seats": 47
+      "seats": 49
     },
     {
       "Code": "CSE58",
@@ -14,6 +14,11 @@
       "Code": "CSE69",
       "Name": "Tanmay",
       "seats": 98
+    },
+    {
+      "Code": "CSE543",
+      "Name": "AI",
+      "seats": 31
     }
   ]
 }

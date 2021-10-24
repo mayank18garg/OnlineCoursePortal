@@ -12,6 +12,6 @@ namespace Assignment6._0
     public interface IDeleteUserService
     {
         [OperationContract]
-        void DoWork();
+        string deleteStudent(string studentID);
     }
 }
