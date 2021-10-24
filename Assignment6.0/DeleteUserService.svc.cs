@@ -51,7 +51,7 @@ namespace Assignment6._0
                     return "No students found.";
                 }
 
-                if (exists) // If StudentName doesn't already exist
+                if (exists) 
                 {
 
                     var itemToRemove = usersList.SingleOrDefault(r => r.StudentID == studentID);
