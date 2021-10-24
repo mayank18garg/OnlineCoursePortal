@@ -9,6 +9,11 @@
       "StudentId": "2",
       "StudentName": "Nakul",
       "StudentCourses": [ "CSE 473", "CSE 571", "CSE 598" ]
+    },
+    {
+      "StudentId": "3",
+      "StudentName": "Mayank",
+      "StudentCourses": [ "CSE 473", "CSE 571", "CSE 598" ]
     }
   ]
 }
