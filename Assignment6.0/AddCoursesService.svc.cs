@@ -17,9 +17,10 @@ namespace Assignment6._0
     {
         public class Course
         {
-            public string Code { get; set; }
+            public string Code { get; set; } 
             public string Name { get; set; }
             public Int32 seats { get; set; }
+            public List<string> CourseStudents { get; set; }
         }
 
         public class CourseRootObject
@@ -57,6 +58,7 @@ namespace Assignment6._0
             if (!exists)
             {
                 newCourse.Code = Code; newCourse.Name = Name; newCourse.seats = seats;
+                newCourse.CourseStudents = new List<string>();
                 coursesList.Add(newCourse);
 
                 courseObj.courses = coursesList.ToArray<Course>();

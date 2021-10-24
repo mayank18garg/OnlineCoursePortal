@@ -25,7 +25,7 @@ namespace Assignment6._0
             public string StudentName { get; set; }
             public string Password { get; set; }
             public string StudentID { get; set; }
-            public string[] StudentCourses { get; set; }
+            public List<string> StudentCourses { get; set; }
         }
 
         // Accepts StudentName and password as parameters. Encrypts passwords and stores in a JSON file.
@@ -75,6 +75,7 @@ namespace Assignment6._0
 
                     newUser.StudentName = StudentName;
                     newUser.Password = encryptedPass;
+                    newUser.StudentCourses = new List<string>();
                     // generate Student ID
                     Boolean present = false;
                     Random rnd = new Random();

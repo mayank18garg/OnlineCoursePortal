@@ -19,13 +19,14 @@ namespace Assignment6._0
             public string Code { get; set; }
             public string Name { get; set; }
             public Int32 seats { get; set; }
+            public List<string> CourseStudents { get; set; }
         }
 
         public class CourseRootObject
         {
             public Course[] courses { get; set; }
         }
-        public string Registercourse(string courseCode, string userName)
+        public string Registercourse(string courseCode, string userID)
         {
             List<Course> coursesList = new List<Course>();
             CourseRootObject courseObj = new CourseRootObject();
