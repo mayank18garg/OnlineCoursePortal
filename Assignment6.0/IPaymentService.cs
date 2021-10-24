@@ -12,6 +12,6 @@ namespace Assignment6._0
     public interface IPaymentService
     {
         [OperationContract]
-        void DoWork();
+        string ValidatePayment(long creditCardNum, string expiryDate, string cvv);
     }
 }
