@@ -12,6 +12,6 @@ namespace Assignment6._0
     public interface IRegisterUserService
     {
         [OperationContract]
-        void DoWork();
+        string createAccount(string StudentName, string password);
     }
 }
