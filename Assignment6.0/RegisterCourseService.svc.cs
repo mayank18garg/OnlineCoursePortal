@@ -26,7 +26,7 @@ namespace Assignment6._0
         {
             public Course[] courses { get; set; }
         }
-        public string Registercourse(string courseCode, string userID)
+        public string Registercourse(string courseCode, string userId)
         {
             List<Course> coursesList = new List<Course>();
             CourseRootObject courseObj = new CourseRootObject();
