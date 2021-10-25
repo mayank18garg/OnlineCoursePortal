@@ -43,12 +43,10 @@ namespace Assignment6._0
         
         public string deleteCourse(string Code)
         {
-            //Course newCourse = new Course();
             CourseRootObject courseObj = new CourseRootObject();
             List<Course> coursesList = new List<Course>();
             string json;
             Boolean exists = false;
-            Boolean created = false;
 
             string coursesPath = HttpRuntime.AppDomainAppPath + "\\courses_list.json";
             string usersPath = HttpRuntime.AppDomainAppPath + "\\users_list.json";
@@ -96,9 +94,6 @@ namespace Assignment6._0
                                     user.StudentCourses.RemoveAt(index);
                                 }
                                 break;
-                                /*courseObj.courses = coursesList.ToArray<Course>();
-                                jsonCourse = JsonConvert.SerializeObject(courseObj, Formatting.Indented);
-                                File.WriteAllText(coursespath, jsonCourse);*/
                             }
                         }
                     }
