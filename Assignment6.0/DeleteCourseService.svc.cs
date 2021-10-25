@@ -28,18 +28,20 @@ namespace Assignment6._0
             public List<string> StudentCourses { get; set; }
         }
 
+        public class CourseRootObject
+        {
+            public Course[] courses { get; set; }
+        }
         public class Course
         {
             public string Code { get; set; }
             public string Name { get; set; }
             public Int32 seats { get; set; }
+            public List<string> CourseStudents { get; set; }
         }
 
-        public class CourseRootObject
-        {
-            public Course[] courses { get; set; }
-        }
-        public Boolean deleteCourse(string Code)
+        
+        public string deleteCourse(string Code)
         {
             //Course newCourse = new Course();
             CourseRootObject courseObj = new CourseRootObject();
@@ -84,30 +86,34 @@ namespace Assignment6._0
                     usersList = usersObj.users.ToList<User>();
                     foreach (var i in itemToRemove.CourseStudents)
                     {
-                        foreach (Course course in coursesList)
+                        foreach (User user in usersList)
                         {
-                            if (course.Code == i)
+                            if (user.StudentID == i)
                             {
-                                course.seats = course.seats + 1;
-                                courseObj.courses = coursesList.ToArray<Course>();
+                                int index = user.StudentCourses.IndexOf(Code);
+                                if (index != -1)
+                                {
+                                    user.StudentCourses.RemoveAt(index);
+                                }
+                                break;
+                                /*courseObj.courses = coursesList.ToArray<Course>();
                                 jsonCourse = JsonConvert.SerializeObject(courseObj, Formatting.Indented);
-                                File.WriteAllText(coursespath, jsonCourse);
+                                File.WriteAllText(coursespath, jsonCourse);*/
                             }
                         }
                     }
-
-                    usersList.Remove(itemToRemove);
                     usersObj.users = usersList.ToArray<User>(); // Converts the list to a User object array
-                    json = JsonConvert.SerializeObject(usersObj, Formatting.Indented); // Converts object to JSON string
+                    jsonUser = JsonConvert.SerializeObject(usersObj, Formatting.Indented); // Converts object to JSON string
+                    File.WriteAllText(usersPath, jsonUser); // Writes JSON data to the file
+
+                    coursesList.Remove(itemToRemove);
+                    courseObj.courses = coursesList.ToArray<Course>(); // Converts the list to a User object array
+                    json = JsonConvert.SerializeObject(courseObj, Formatting.Indented); // Converts object to JSON string
                     File.WriteAllText(coursesPath, json); // Writes JSON data to the file
-                    return "Student Removed successfully";
-                }
-                else
-                {
-                    return "Student not found";
+                    return "Course Removed successfully";
                 }
             }
-            return created;
+            return "Student not found";
         }
     }
 }
