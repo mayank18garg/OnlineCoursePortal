@@ -12,6 +12,6 @@ namespace Assignment6._0
     public interface IDeleteCourseService
     {
         [OperationContract]
-        void DoWork();
+        string deleteCourse(string Code);
     }
 }

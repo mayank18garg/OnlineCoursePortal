@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddCoursesService.svc" />
+    <Content Include="DeleteCourseService.svc" />
     <Content Include="DeleteUserService.svc" />
     <Content Include="PaymentService.svc" />
     <Content Include="RegisterCourseService.svc" />
@@ -75,10 +76,14 @@
     <Compile Include="AddCoursesService.svc.cs">
       <DependentUpon>AddCoursesService.svc</DependentUpon>
     </Compile>
+    <Compile Include="DeleteCourseService.svc.cs">
+      <DependentUpon>DeleteCourseService.svc</DependentUpon>
+    </Compile>
     <Compile Include="DeleteUserService.svc.cs">
       <DependentUpon>DeleteUserService.svc</DependentUpon>
     </Compile>
     <Compile Include="IAddCoursesService.cs" />
+    <Compile Include="IDeleteCourseService.cs" />
     <Compile Include="IDeleteUserService.cs" />
     <Compile Include="IPaymentService.cs" />
     <Compile Include="IRegisterCourseService.cs" />
