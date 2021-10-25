@@ -55,6 +55,7 @@ namespace Assignment6._0
             List<User> usersList = new List<User>(); // List of users to read in existing data and add new users
 
             usersObj = JsonConvert.DeserializeObject<UsersRootObject>(jsonUserData); // transfers jsonData to the usersObj
+            usersList = usersObj.users.ToList<User>();
             //user
             string jsonData = File.ReadAllText(path);
             string json;
@@ -66,6 +67,7 @@ namespace Assignment6._0
                 if (course.Code == courseCode)
                 {
                     course.seats = course.seats - 1;
+                    course.CourseStudents.Add(userId);
                     courseObj.courses = coursesList.ToArray<Course>();
                     json = JsonConvert.SerializeObject(courseObj, Formatting.Indented);
                     File.WriteAllText(path, json);
@@ -75,12 +77,14 @@ namespace Assignment6._0
                     {
                         itemToAdd.StudentCourses.Add(course.Code);
                     }
-                    usersObj.users = usersList.ToArray<User>(); // Converts the list to a User object array
-                    json = JsonConvert.SerializeObject(usersObj, Formatting.Indented); // Converts object to JSON string
-                    File.WriteAllText(userpath, json); // Writes JSON data to the file
+                    
                 }
                
             }
+            usersObj.users = usersList.ToArray<User>(); // Converts the list to a User object array
+            json = JsonConvert.SerializeObject(usersObj, Formatting.Indented); // Converts object to JSON string
+            File.WriteAllText(userpath, json); // Writes JSON data to the file
+
             string ans = string.Format("Course {0} has been registered for user {1}", courseCode, userId);
             return ans;
         }

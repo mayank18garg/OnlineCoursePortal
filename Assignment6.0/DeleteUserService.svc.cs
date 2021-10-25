@@ -57,8 +57,8 @@ namespace Assignment6._0
                     var itemToRemove = usersList.SingleOrDefault(r => r.StudentID == studentID);
                     if (itemToRemove != null)
                     {
-                        bool isEmpty = !itemToRemove.StudentCourses.Any();
-                        if (!isEmpty)
+                        bool isNotEmpty = !itemToRemove.StudentCourses?.Any() != true;
+                        if (isNotEmpty)
                         {
                             List<Course> coursesList = new List<Course>();
                             CourseRootObject courseObj = new CourseRootObject();
@@ -75,12 +75,19 @@ namespace Assignment6._0
                                     if (course.Code == i)
                                     {
                                         course.seats = course.seats + 1;
-                                        courseObj.courses = coursesList.ToArray<Course>();
-                                        jsonCourse = JsonConvert.SerializeObject(courseObj, Formatting.Indented);
-                                        File.WriteAllText(coursespath, jsonCourse);
+                                        int index = course.CourseStudents.IndexOf(itemToRemove.StudentID);
+                                        if (index != -1)
+                                        {
+                                            course.CourseStudents.RemoveAt(index);
+                                        }
+                                        
                                     }
                                 }
+                                
                             }
+                            courseObj.courses = coursesList.ToArray<Course>();
+                            jsonCourse = JsonConvert.SerializeObject(courseObj, Formatting.Indented);
+                            File.WriteAllText(coursespath, jsonCourse);
                         }
 
                         usersList.Remove(itemToRemove);
@@ -121,7 +128,7 @@ namespace Assignment6._0
             public string StudentName { get; set; }
             public string Password { get; set; }
             public string StudentID { get; set; }
-            public string[] StudentCourses { get; set; }
+            public List<string> StudentCourses { get; set; }
         }
 
         public class Course
@@ -129,6 +136,7 @@ namespace Assignment6._0
             public string Code { get; set; }
             public string Name { get; set; }
             public Int32 seats { get; set; }
+            public List<string> CourseStudents { get; set; }
         }
 
         public class CourseRootObject

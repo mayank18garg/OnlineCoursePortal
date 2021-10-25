@@ -3,26 +3,50 @@
     {
       "Code": "CSE445",
       "Name": "Software",
-      "CourseStudents": [ "10000", "10001", "10002" ],
-      "seats": 49
+      "seats": 50,
+      "CourseStudents": [
+        "10000",
+        "10001",
+        "10002"
+      ]
     },
     {
-      "Code": "CSE58",
+      "Code": "CSE558",
       "Name": "mayank",
-      "CourseStudents": [ "10000", "10001", "10002" ],
-      "seats": 99
+      "seats": 99,
+      "CourseStudents": [
+        "10000",
+        "10001",
+        "10002"
+      ]
     },
     {
-      "Code": "CSE69",
+      "Code": "CSE569",
       "Name": "Tanmay",
-      "CourseStudents": [ "10000", "10001", "10002" ],
-      "seats": 98
+      "seats": 98,
+      "CourseStudents": [
+        "10000",
+        "10001",
+        "10002"
+      ]
     },
     {
       "Code": "CSE543",
       "Name": "AI",
-      "CourseStudents": [ "10000", "10001", "10002" ],
-      "seats": 31
+      "seats": 31,
+      "CourseStudents": [
+        "10000",
+        "10001",
+        "10002"
+      ]
+    },
+    {
+      "Code": "CSE498",
+      "Name": "DDS",
+      "seats": 101,
+      "CourseStudents": [
+        "10003"
+      ]
     }
   ]
 }

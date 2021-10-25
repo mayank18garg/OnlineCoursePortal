@@ -12,6 +12,6 @@ namespace Assignment6._0
     public interface IRegisterCourseService
     {
         [OperationContract]
-        string Registercourse(string courseCode, string userName);
+        string Registercourse(string courseCode, string userId);
     }
 }

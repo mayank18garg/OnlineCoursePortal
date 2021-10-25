@@ -1,22 +1,24 @@
 {
   "users": [
     {
-      "StudentId": "10000",
       "StudentName": "Tanmay",
-      "StudentCourses": [ "CSE445", "CSE563", "CSE543" ],
-      "Password": "97100109105110"
+      "Password": "97100109105110",
+      "StudentID": "10000",
+      "StudentCourses": []
     },
     {
-      "StudentId": "10001",
       "StudentName": "Nakul",
-      "StudentCourses": [ "CSE473", "CSE571", "CSE598" ],
-      "Password": "97100109105110"
+      "Password": "97100109105110",
+      "StudentID": "10001",
+      "StudentCourses": []
     },
     {
-      "StudentId": "10003",
       "StudentName": "Mayank",
-      "StudentCourses": [ "CSE473", "CSE571", "CSE598" ],
-      "Password": "97100109105110"
+      "Password": "97100109105110",
+      "StudentID": "10003",
+      "StudentCourses": [
+        "CSE498"
+      ]
     }
   ]
 }
